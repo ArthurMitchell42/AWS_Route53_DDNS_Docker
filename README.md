@@ -1,16 +1,19 @@
 # AWS_Route53_DDNS_Docker
+## History
+8/7/21 2.0.0.2 Added support for docker health checking
+
 ## Set the environment variables in power shell
 $env:AWS_ACCESS_KEY_ID = "XXXXXXXXXXXXXXXXXXXX" <br>
 $env:AWS_SECRET_ACCESS_KEY="YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY" <br>
 
-# Set the environment variables in Linux shell
+## Set the environment variables in Linux shell
 Variable for the credentials file <br>
 env AWS_SHARED_CREDENTIALS_FILE <br>
 
-# Build
+## Build
 docker build -t aws-route53-ddns . 
 
-# Run
+## Run
 docker run -d \ <br>
     --name AWS_Route53_DDNS \ <br>
     -v "C:\Users\USERNAME\config:/config" \ <br>
@@ -20,7 +23,7 @@ docker run -d \ <br>
     --restart unless-stopped \ <br>
     aws-route53-ddns <br>
 
-# To tag and push it
+## To tag and push it
 docker login -u YOUR-USER-NAM <br>
 docker tag aws-route53-ddns kronos443/aws-route53-ddns:amd64-latest <br>
 docker push kronos443/aws-route53-ddns:amd64-latest <br>
