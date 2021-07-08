@@ -11,7 +11,14 @@ env AWS_SHARED_CREDENTIALS_FILE <br>
 docker build -t aws-route53-ddns . 
 
 # Run
-docker run -d --name AWS_Route53_DDNS -v "C:\Users\USERNAME\config:/config" -e AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXXXXXX -e AWS_SECRET_ACCESS_KEY=YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY -e TZ=Europe/London --restart unless-stopped aws-route53-ddns <br>
+docker run -d \ <br>
+    --name AWS_Route53_DDNS \ <br>
+    -v "C:\Users\USERNAME\config:/config" \ <br>
+    -e AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXXXXXX \ <br>
+    -e AWS_SECRET_ACCESS_KEY=YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY \ <br>
+    -e TZ=Europe/London \ <br>
+    --restart unless-stopped \ <br>
+    aws-route53-ddns <br>
 
 # To tag and push it
 docker login -u YOUR-USER-NAM <br>
