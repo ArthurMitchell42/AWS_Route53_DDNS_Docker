@@ -1,6 +1,18 @@
 # AWS_Route53_DDNS_Docker
 ## History
-8/7/21 2.0.0.2 Added support for docker health checking
+<table>
+<thead>
+<tr bgcolor="lightblue"><th align="center">Date</th>
+<th>Version</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">8/7/21</td>
+<td align="left">2.0.0.2</td>
+<td align="left">Added support for docker health checking</td>
+</tr>
+</tbody></table>
 
 ## Set the environment variables in power shell
 $env:AWS_ACCESS_KEY_ID = "XXXXXXXXXXXXXXXXXXXX" <br>
