@@ -12,10 +12,10 @@ RUN rm -rf /var/lib/apt/lists/*
 ENV AWS_CONFIG_PATH=/config/
 ENV HEALTHCHECK_HEARTBEAT_FILE=/app/heartbeat
 ENV HEALTHCHECK_INTERVAL_FILE=/app/max_age
-ENV AWS_DOCKER_VERSION="2.0.0.3"
+ENV AWS_SHARED_CREDENTIALS_FILE=/config/credentials
+ENV AWS_DOCKER_VERSION="2.1.0.0"
 WORKDIR /app
 COPY ./app /app
-#RUN mv healthcheck_amd64.sh healthcheck.sh
 RUN chmod +x healthcheck.sh
 RUN rm put_python_app_here
 HEALTHCHECK --start-period=60s --interval=360s --retries=2 CMD sh -c '/app/healthcheck.sh' 
