@@ -9,6 +9,11 @@
 </thead>
 <tbody>
 <tr>
+<td align="left">25/06/23</td>
+<td align="left">2.2.0.0</td>
+<td align="left">Updated app to address errors thrown by AWS service outages.</td>
+</tr>
+<tr>
 <td align="left">15/10/22</td>
 <td align="left">2.1.0.0</td>
 <td align="left">Added support for docker secrets and other methods of providing credentials</td>
