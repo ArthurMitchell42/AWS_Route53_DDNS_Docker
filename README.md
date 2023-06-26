@@ -9,6 +9,11 @@
 </thead>
 <tbody>
 <tr>
+<td align="left">26/06/23</td>
+<td align="left">2.2.0.1</td>
+<td align="left">Corrected spelling of .ini parameter.</td>
+</tr>
+<tr>
 <td align="left">25/06/23</td>
 <td align="left">2.2.0.0</td>
 <td align="left">Updated app to address errors thrown by AWS service outages.</td>
