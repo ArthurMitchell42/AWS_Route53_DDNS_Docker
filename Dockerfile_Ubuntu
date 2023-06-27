@@ -16,8 +16,10 @@ ENV AWS_SHARED_CREDENTIALS_FILE=/config/credentials
 ENV AWS_DOCKER_VERSION="2.2.1.0"
 WORKDIR /app
 COPY ./app /app
+RUN mv healthcheck_python_alpine.sh healthcheck.sh
+RUN rm healthcheck_ubuntu.sh
 RUN chmod +x healthcheck.sh
 RUN rm put_python_app_here
-HEALTHCHECK --start-period=60s --interval=360s --retries=2 CMD sh -c '/app/healthcheck.sh' 
+HEALTHCHECK --start-period=60s --interval=120s --retries=2 CMD sh -c '/app/healthcheck.sh' 
 CMD ["/app/AWS_Route53_DDNS.py"]
 ENTRYPOINT ["python3"]
